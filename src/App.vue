@@ -4,7 +4,14 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view />
+    <cv-button> victor gozaru Button</cv-button>
+
+    <tutorial-header />
+      <cv-content id="#main-content">
+      <router-view /> 
+    </cv-content>
+
+    
   </div>
 </template>
 
@@ -30,3 +37,17 @@
   }
 }
 </style>
+
+<style lang="scss">
+@import "./styles/carbon";
+</style>
+
+<script>
+import TutorialHeader from "./components/TutorialHeader";
+export default {
+  name: "App",
+  components: {
+    TutorialHeader,
+  },
+};
+</script>
